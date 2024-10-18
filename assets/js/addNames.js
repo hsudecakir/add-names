@@ -21,7 +21,9 @@ let searchedName;
 let counter = 0;
 
 function searchNames(){
-  searchedName = prompt('Aradığınız ismi giriniz.').toLowerCase();
+  if(addFirstNames > 0){
+    searchedName = prompt('Aradığınız ismi giriniz.').toLowerCase();
+  }
   for(let i = 0; i < firstNames.length; i++){
     if(firstNames[i] === searchedName) {
     counter++;
